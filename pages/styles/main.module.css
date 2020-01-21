@@ -1,0 +1,246 @@
+.main {
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.mainAlt {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: scroll;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.mainAlt::-webkit-scrollbar {
+  display: none;
+}
+
+.instaGrid {
+  width: 36rem;
+  overflow-y: hidden;
+  overflow: scroll;
+}
+
+.instaGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.youtubeScrollr {
+  width: 36rem;
+  overflow-y: hidden;
+  overflow: scroll;
+  margin: 0 0 2rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5e5fb), to(#ffffff));
+  background: linear-gradient(#e5e5fb, #ffffff);
+  padding: 1rem 2.5rem;
+  height: 20rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.youtubeScrollr::-webkit-scrollbar {
+  display: none;
+}
+
+.vscoScrollr {
+  width: 36rem;
+  overflow-y: hidden;
+  overflow: scroll;
+  margin: 0 0 2rem 0;
+  padding: 1rem 2.5rem;
+  height: 20rem;
+  border-radius: 6px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5e5fb), to(#ffffff));
+  background: linear-gradient(#e5e5fb, #ffffff);
+}
+
+.vscoScrollr::-webkit-scrollbar {
+  display: none;
+}
+
+.redditScrollr {
+  width: 36rem;
+  overflow-y: hidden;
+  overflow: scroll;
+  margin: 0 0 2rem 0;
+  padding: 1rem 2.5rem;
+  height: 20rem;
+  border-radius: 6px;
+}
+
+.redditScrollr a {
+  text-decoration: none;
+  color: #2c616b;
+  font-family: rubik-light;
+}
+
+.redditScrollr a:hover {
+  color: #74979e;
+}
+
+.redditScrollr::-webkit-scrollbar {
+  display: none;
+}
+
+.subLink {
+  margin-left: 3rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 23456;
+  background: #ffff;
+  top: 0;
+}
+
+.container {
+  height: auto;
+  width: auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.redditContainer {
+  height: 3rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid #e5e5fb;
+  border-radius: 15px;
+  padding: 1.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(207, 229, 233, 0.116);
+}
+
+.linkThing {
+  text-decoration: none;
+  border-top: 6px #e5e5fb38 dashed;
+  margin-left: 1rem;
+}
+
+.subLinkThing {
+  text-decoration: none;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 12px;
+}
+
+.linkParent {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sheetsContainer {
+  display: block;
+}
+
+.instaGridImage {
+  width: 18rem;
+}
+
+.instaGridImage:hover {
+  opacity: 0.33;
+  cursor: pointer;
+}
+
+.vscoGridImage {
+  width: 11rem;
+  padding: 0.33rem;
+}
+
+.vscoGridImage:hover {
+  opacity: 0.33;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 66px;
+  border-radius: 15%;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.iconNail {
+  font-size: 3rem;
+  color: #e5e5fb;
+  padding-top: 0.5rem;
+}
+
+.iconContainer {
+  width: 100px;
+  height: 66px;
+  background-color: #ffffff;
+  border-radius: 15%;
+  text-align-last: center;
+  border: 1px solid #e5e5fb;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+.rightSide {
+  overflow-y: hidden;
+  overflow: scroll;
+}
+
+.rightSide::-webkit-scrollbar {
+  display: none;
+}
+
+.rightSideContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 47rem;
+  margin: 0 0 0 2rem;
+}
+
+.savedComponent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 53%;
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=main.module.css.map */

@@ -1,0 +1,44 @@
+.header {
+	display: flex;
+	flex-direction: row;
+}
+
+.headerLinks {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.headerLinkItem {
+	padding: 0 1rem 0 1rem;
+
+	a {
+		cursor: pointer;
+		animation: linkEffect 0.55s ease-out 0.21s both;
+	}
+}
+
+.headerLinkItem:hover {
+	animation: headerItemEffect 0.55s ease-in 0.01s both;
+	cursor: pointer;
+}
+
+@keyframes headerItemEffect {
+	from {
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(720deg);
+	}
+}
+
+@keyframes linkEffect {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
