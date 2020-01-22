@@ -26,7 +26,7 @@ function HomePage() {
 
 	return (
 		<ApolloProvider client={client}>
-			<div style={{height: "100vh", overflow: "hidden"}}>
+			<div className={styles.mainMain}>
 				<div className={styles.header}>
 					<Header />
 				</div>

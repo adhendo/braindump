@@ -88,10 +88,251 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/header.js":
+/*!******************************!*\
+  !*** ./components/header.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/header.module.css */ "./styles/header.module.css");
+/* harmony import */ var _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_header_module_css__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/adamhendrickson/blogboi/components/header.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+function Header() {
+  return __jsx("div", {
+    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.header,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("ul", {
+    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.headerLinks,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("li", {
+    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.headerLinkItem,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "/"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/from-me",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, __jsx("li", {
+    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.headerLinkItem,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, "me"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/saved-stuff",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, __jsx("li", {
+    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.headerLinkItem,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, "saved")))));
+}
+
+/***/ }),
+
+/***/ "./components/vscoLoader.js":
+/*!**********************************!*\
+  !*** ./components/vscoLoader.js ***!
+  \**********************************/
+/*! exports provided: GET_VSCO, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_VSCO", function() { return GET_VSCO; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/main.module.css */ "./styles/main.module.css");
+/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_main_module_css__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/adamhendrickson/blogboi/components/vscoLoader.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const GET_VSCO = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default.a`
+	query {
+		vsco {
+			id
+			imageURL
+			linkURL
+		}
+	}
+`;
+
+function VscoLoader() {
+  const {
+    loading,
+    error,
+    data
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_VSCO);
+  if (loading) return "";
+  if (error) return `Error! ${error.message}`;
+  return __jsx("div", {
+    className: _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.vscoScrollr,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, data.vsco.map(vsco => __jsx("a", {
+    href: vsco.linkURL,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx("img", {
+    className: _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.vscoGridImage,
+    src: vsco.imageURL,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (VscoLoader);
+
+/***/ }),
+
+/***/ "./components/youtubeMeLoader.js":
+/*!***************************************!*\
+  !*** ./components/youtubeMeLoader.js ***!
+  \***************************************/
+/*! exports provided: GET_YOUTUBE_VIDEOS, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_YOUTUBE_VIDEOS", function() { return GET_YOUTUBE_VIDEOS; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/main.module.css */ "./styles/main.module.css");
+/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_main_module_css__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/adamhendrickson/blogboi/components/youtubeMeLoader.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const GET_YOUTUBE_VIDEOS = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default.a`
+	query {
+		youtubeMe {
+			id
+			videoTitle
+			videoURL
+		}
+	}
+`;
+
+function YoutubeMeLoader() {
+  const {
+    loading,
+    error,
+    data
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_YOUTUBE_VIDEOS);
+  if (loading) return "";
+  if (error) return `Error! ${error.message}`;
+  return __jsx("div", {
+    className: _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.youtubeScrollr,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, data.youtubeMe.map(youtubeMe => __jsx("iframe", {
+    width: "450",
+    height: "235",
+    src: youtubeMe.videoURL,
+    frameborder: "0",
+    allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+    allowfullscreen: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  })));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (YoutubeMeLoader);
+
+/***/ }),
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
 /*!************************************************************!*\
@@ -1884,247 +2125,6 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/components/header.js":
-/*!************************************!*\
-  !*** ./pages/components/header.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/header.module.css */ "./pages/styles/header.module.css");
-/* harmony import */ var _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_header_module_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/adamhendrickson/blogboi/pages/components/header.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-function Header() {
-  return __jsx("div", {
-    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.header,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, __jsx("ul", {
-    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.headerLinks,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, __jsx("li", {
-    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.headerLinkItem,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, "/"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/from-me",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, __jsx("li", {
-    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.headerLinkItem,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, "me"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/saved-stuff",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, __jsx("li", {
-    className: _styles_header_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.headerLinkItem,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, "saved")))));
-}
-
-/***/ }),
-
-/***/ "./pages/components/vscoLoader.js":
-/*!****************************************!*\
-  !*** ./pages/components/vscoLoader.js ***!
-  \****************************************/
-/*! exports provided: GET_VSCO, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_VSCO", function() { return GET_VSCO; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/main.module.css */ "./pages/styles/main.module.css");
-/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_main_module_css__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/adamhendrickson/blogboi/pages/components/vscoLoader.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-const GET_VSCO = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default.a`
-	query {
-		vsco {
-			id
-			imageURL
-			linkURL
-		}
-	}
-`;
-
-function VscoLoader() {
-  const {
-    loading,
-    error,
-    data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_VSCO);
-  if (loading) return "";
-  if (error) return `Error! ${error.message}`;
-  return __jsx("div", {
-    className: _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.vscoScrollr,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, data.vsco.map(vsco => __jsx("a", {
-    href: vsco.linkURL,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, __jsx("img", {
-    className: _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.vscoGridImage,
-    src: vsco.imageURL,
-    alt: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }))));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (VscoLoader);
-
-/***/ }),
-
-/***/ "./pages/components/youtubeMeLoader.js":
-/*!*********************************************!*\
-  !*** ./pages/components/youtubeMeLoader.js ***!
-  \*********************************************/
-/*! exports provided: GET_YOUTUBE_VIDEOS, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_YOUTUBE_VIDEOS", function() { return GET_YOUTUBE_VIDEOS; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/main.module.css */ "./pages/styles/main.module.css");
-/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_main_module_css__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/adamhendrickson/blogboi/pages/components/youtubeMeLoader.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-const GET_YOUTUBE_VIDEOS = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default.a`
-	query {
-		youtubeMe {
-			id
-			videoTitle
-			videoURL
-		}
-	}
-`;
-
-function YoutubeMeLoader() {
-  const {
-    loading,
-    error,
-    data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_YOUTUBE_VIDEOS);
-  if (loading) return "";
-  if (error) return `Error! ${error.message}`;
-  return __jsx("div", {
-    className: _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.youtubeScrollr,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, data.youtubeMe.map(youtubeMe => __jsx("iframe", {
-    width: "450",
-    height: "235",
-    src: youtubeMe.videoURL,
-    frameborder: "0",
-    allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-    allowfullscreen: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  })));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (YoutubeMeLoader);
-
-/***/ }),
-
 /***/ "./pages/from-me.js":
 /*!**************************!*\
   !*** ./pages/from-me.js ***!
@@ -2142,10 +2142,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var cross_fetch_polyfill__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! cross-fetch/polyfill */ "cross-fetch/polyfill");
 /* harmony import */ var cross_fetch_polyfill__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(cross_fetch_polyfill__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/header */ "./pages/components/header.js");
-/* harmony import */ var _components_vscoLoader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/vscoLoader */ "./pages/components/vscoLoader.js");
-/* harmony import */ var _components_youtubeMeLoader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/youtubeMeLoader */ "./pages/components/youtubeMeLoader.js");
-/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/main.module.css */ "./pages/styles/main.module.css");
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/header */ "./components/header.js");
+/* harmony import */ var _components_vscoLoader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/vscoLoader */ "./components/vscoLoader.js");
+/* harmony import */ var _components_youtubeMeLoader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/youtubeMeLoader */ "./components/youtubeMeLoader.js");
+/* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/main.module.css */ "./styles/main.module.css");
 /* harmony import */ var _styles_main_module_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_main_module_css__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "/Users/adamhendrickson/blogboi/pages/from-me.js";
 
@@ -2226,60 +2226,63 @@ function FromMe() {
 
 /***/ }),
 
-/***/ "./pages/styles/header.module.css":
-/*!****************************************!*\
-  !*** ./pages/styles/header.module.css ***!
-  \****************************************/
+/***/ "./styles/header.module.css":
+/*!**********************************!*\
+  !*** ./styles/header.module.css ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 // Exports
 module.exports = {
-	"header": "header_header__2UL2E",
-	"headerLinks": "header_headerLinks__1F1Ka",
-	"headerLinkItem": "header_headerLinkItem__3n-lh",
-	"linkEffect": "header_linkEffect__nCg4k",
-	"headerItemEffect": "header_headerItemEffect__3FqyS"
+	"header": "header_header__1-9k4",
+	"headerLinks": "header_headerLinks__2IU3j",
+	"headerLinkItem": "header_headerLinkItem__1kdNH",
+	"linkEffect": "header_linkEffect__2hMYR",
+	"headerItemEffect": "header_headerItemEffect__38la7"
 };
 
 /***/ }),
 
-/***/ "./pages/styles/main.module.css":
-/*!**************************************!*\
-  !*** ./pages/styles/main.module.css ***!
-  \**************************************/
+/***/ "./styles/main.module.css":
+/*!********************************!*\
+  !*** ./styles/main.module.css ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 // Exports
 module.exports = {
-	"main": "main_main__15-hN",
-	"mainAlt": "main_mainAlt__3M6j-",
-	"instaGrid": "main_instaGrid__1pBHN",
-	"youtubeScrollr": "main_youtubeScrollr__Mb1pg",
-	"vscoScrollr": "main_vscoScrollr__1Q1Ci",
-	"redditScrollr": "main_redditScrollr__3-z-W",
-	"subLink": "main_subLink__2OZIK",
-	"header": "main_header__3zc6b",
-	"container": "main_container__3Erv3",
-	"redditContainer": "main_redditContainer__2O1EO",
-	"linkThing": "main_linkThing__IINwd",
-	"subLinkThing": "main_subLinkThing__1q3F5",
-	"linkParent": "main_linkParent__31zB1",
-	"sheetsContainer": "main_sheetsContainer__9TCxb",
-	"instaGridImage": "main_instaGridImage__E4okL",
-	"vscoGridImage": "main_vscoGridImage__2fOj_",
-	"thumbnail": "main_thumbnail__qar9t",
-	"iconNail": "main_iconNail__2kDIY",
-	"iconContainer": "main_iconContainer__23uIa",
-	"rightSide": "main_rightSide__GIELQ",
-	"rightSideContainer": "main_rightSideContainer__11q7X",
-	"savedComponent": "main_savedComponent__3vbk8"
+	"main": "main_main__26A4B",
+	"mainMain": "main_mainMain__3Al6e",
+	"mainAlt": "main_mainAlt__fds6V",
+	"instaGrid": "main_instaGrid__2hY2j",
+	"youtubeScrollr": "main_youtubeScrollr__1AWzm",
+	"vscoScrollr": "main_vscoScrollr__3ts0q",
+	"redditScrollr": "main_redditScrollr__37Lvi",
+	"subLink": "main_subLink__2a1AE",
+	"header": "main_header__YFiiz",
+	"container": "main_container__46_JD",
+	"redditContainer": "main_redditContainer__z5XuI",
+	"linkThing": "main_linkThing__1cygd",
+	"subLinkThing": "main_subLinkThing__2BCjW",
+	"linkParent": "main_linkParent__1NiDc",
+	"sheetsContainer": "main_sheetsContainer__1FNxQ",
+	"instaGridImage": "main_instaGridImage__2iGm8",
+	"instaGridImage2": "main_instaGridImage2__1dsa_",
+	"vscoGridImage": "main_vscoGridImage__1C_xl",
+	"thumbnail": "main_thumbnail__l9L9g",
+	"iconNail": "main_iconNail__30NDa",
+	"iconContainer": "main_iconContainer__1HhRZ",
+	"rightSide": "main_rightSide__2uqo2",
+	"rightSideContainer": "main_rightSideContainer__15FDJ",
+	"savedComponent": "main_savedComponent__1ojS3",
+	"savedComponentAlt": "main_savedComponentAlt__xrYlK"
 };
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!********************************!*\
   !*** multi ./pages/from-me.js ***!
   \********************************/

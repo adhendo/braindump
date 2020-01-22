@@ -4,7 +4,7 @@ import "cross-fetch/polyfill";
 import Header from "../components/header";
 import InstaLoader from "../components/instaLoader";
 import RedditLoader from "../components/redditLoader";
-import YoutubeLoader from "../components/youtubeLoader";
+import YoutubeAltLoader from "../components/youtubeAltLoader";
 import styles from "../styles/main.module.css";
 
 function Saved() {
@@ -35,8 +35,8 @@ function Saved() {
 					<div className={styles.savedComponent}>
 						<RedditLoader />
 					</div>
-					<div className={styles.savedComponent}>
-						<YoutubeLoader />
+					<div className={styles.savedComponentAlt}>
+						<YoutubeAltLoader />
 					</div>
 				</div>
 			</div>

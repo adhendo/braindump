@@ -3,11 +3,31 @@
 	flex-direction: row;
 	display: flex;
 	margin-top: 4rem;
-	margin-left: 4rem;
+	margin-left: 2rem;
 }
 
 .main::-webkit-scrollbar {
 	display: none;
+}
+
+@media (max-width: 768px) {
+	.main {
+		flex-direction: column;
+		margin: auto;
+		display: contents;
+		overflow: scroll;
+	}
+}
+
+.mainMain {
+	height: 100vh;
+	overflow: hidden;
+}
+
+@media (max-width: 768px) {
+	.mainMain {
+		display: contents;
+	}
 }
 
 .mainAlt {
@@ -25,13 +45,25 @@
 }
 
 .instaGrid {
-	width: 36rem;
+	width: 40.5rem;
 	overflow-y: hidden;
 	overflow: scroll;
+	border-radius: 6px;
+	background: linear-gradient(#e5e5fb, #fff);
 }
 
 .instaGrid::-webkit-scrollbar {
 	display: none;
+}
+
+@media (max-width: 768px) {
+	.instaGrid {
+		width: 100%;
+
+		img {
+			width: 50%;
+		}
+	}
 }
 
 .youtubeScrollr {
@@ -50,6 +82,18 @@
 	display: none;
 }
 
+@media (max-width: 768px) {
+	.youtubeScrollr {
+		width: 95% !important;
+		padding: 0 !important;
+	}
+	.vscoScrollr {
+		width: 95% !important;
+		padding: 0 !important;
+		text-align: center;
+	}
+}
+
 .vscoScrollr {
 	width: 36rem;
 	overflow-y: hidden;
@@ -58,7 +102,7 @@
 	padding: 1rem 2.5rem;
 	height: 20rem;
 	border-radius: 6px;
-	text-align: center;
+
 	background: linear-gradient(#e5e5fb, #ffffff);
 }
 
@@ -74,6 +118,7 @@
 	padding: 1rem 2.5rem;
 	height: 20rem;
 	border-radius: 6px;
+	background: linear-gradient(#e5e5fb, #fff);
 
 	a {
 		text-decoration: none;
@@ -88,6 +133,19 @@
 
 .redditScrollr::-webkit-scrollbar {
 	display: none;
+}
+
+@media (max-width: 768px) {
+	.redditScrollr {
+		padding: 1rem 1rem;
+		width: 89%;
+
+		a {
+			height: 2rem;
+			width: 18rem;
+			contain: content;
+		}
+	}
 }
 
 .subLink {
@@ -159,6 +217,21 @@
 	cursor: pointer;
 }
 
+@media (max-width: 768px) {
+	.instaGridImage {
+	}
+}
+
+.instaGridImage2 {
+	width: 18rem;
+	border-radius: 0 4px 4px 0;
+}
+
+.instaGridImage2:hover {
+	opacity: 0.33;
+	cursor: pointer;
+}
+
 .vscoGridImage {
 	width: 11rem;
 	padding: 0.33rem;
@@ -201,6 +274,13 @@
 	display: none;
 }
 
+@media (max-width: 768px) {
+	.rightSide {
+		width: 100%;
+		overflow: hidden;
+	}
+}
+
 .rightSideContainer {
 	display: flex;
 	flex-direction: column;
@@ -208,8 +288,23 @@
 	margin: 0 0 0 2rem;
 }
 
+@media (max-width: 768px) {
+	.rightSideContainer {
+		margin: 0;
+		width: 100vw;
+	}
+}
+
 .savedComponent {
 	display: flex;
-	height: 53%;
-	margin-bottom: 1rem;
+	height: 77%;
+	margin-bottom: 4rem;
+}
+
+.savedComponentAlt {
+	display: flex;
+	height: 77%;
+	margin-bottom: 4rem;
+	width: 100%;
+	justify-content: center;
 }
