@@ -1,10 +1,10 @@
 import {ApolloProvider} from "@apollo/react-hooks";
 import {ApolloClient, HttpLink, InMemoryCache} from "apollo-boost";
 import "cross-fetch/polyfill";
-import Header from "./components/header";
-import VscoLoader from "./components/vscoLoader";
-import YoutubeMeLoader from "./components/youtubeMeLoader";
-import styles from "./styles/main.module.css";
+import Header from "../components/header";
+import VscoLoader from "../components/vscoLoader";
+import YoutubeMeLoader from "../components/youtubeMeLoader";
+import styles from "../styles/main.module.css";
 
 function FromMe() {
 	const httpLink = new HttpLink({

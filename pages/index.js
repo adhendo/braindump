@@ -1,13 +1,13 @@
 import {ApolloProvider} from "@apollo/react-hooks";
 import {ApolloClient, HttpLink, InMemoryCache} from "apollo-boost";
 import "cross-fetch/polyfill";
-import Header from "./components/header";
-import InstaLoader from "./components/instaLoader";
-import RedditLoader from "./components/redditLoader";
-import VscoLoader from "./components/vscoLoader";
-import YoutubeLoader from "./components/youtubeLoader";
-import YoutubeMeLoader from "./components/youtubeMeLoader";
-import styles from "./styles/main.module.css";
+import Header from "../components/header";
+import InstaLoader from "../components/instaLoader";
+import RedditLoader from "../components/redditLoader";
+import VscoLoader from "../components/vscoLoader";
+import YoutubeLoader from "../components/youtubeLoader";
+import YoutubeMeLoader from "../components/youtubeMeLoader";
+import styles from "../styles/main.module.css";
 
 function HomePage() {
 	const httpLink = new HttpLink({
