@@ -22,8 +22,9 @@ function YoutubeLoader() {
 		<div className={styles.youtubeScrollr}>
 			{data.youtube.map(youtube => (
 				<iframe
-					width="450"
-					height="235"
+					className={styles.youtubeVid}
+					width="325"
+					height="200"
 					src={youtube.videoURL}
 					frameborder="0"
 					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

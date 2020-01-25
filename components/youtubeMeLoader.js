@@ -19,15 +19,17 @@ function YoutubeMeLoader() {
 	if (error) return `Error! ${error.message}`;
 
 	return (
-		<div className={styles.youtubeScrollr}>
-			{data.youtubeMe.map(youtubeMe => (
-				<iframe
-					width="450"
-					height="235"
-					src={youtubeMe.videoURL}
-					frameborder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+		<div className={styles.youtubeMeScrollr}>
+			{data.youtubeMe.map((youtubeMe, index) => (
+				<div key={index}>
+					<iframe
+						width="600"
+						height="295"
+						src={youtubeMe.videoURL}
+						frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
 			))}
 		</div>
 	);

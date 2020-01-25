@@ -35,10 +35,11 @@ function HomePage() {
 					<InstaLoader />
 					<div className={styles.rightSideContainer}>
 						<div className={styles.rightSide}>
-							<RedditLoader />
-							<VscoLoader />
 							<YoutubeLoader />
+							<VscoLoader />
+
 							<YoutubeMeLoader />
+							<RedditLoader />
 						</div>
 					</div>
 				</div>

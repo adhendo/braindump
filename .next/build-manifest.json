@@ -28,10 +28,6 @@
     "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/saved-stuff": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }

@@ -45,7 +45,7 @@
 }
 
 .instaGrid {
-	width: 40.5rem;
+	width: 36rem;
 	overflow-y: hidden;
 	overflow: scroll;
 	border-radius: 6px;
@@ -66,16 +66,23 @@
 	}
 }
 
+.youtubeVid {
+	margin: 0 0 0.25rem 0;
+}
+
 .youtubeScrollr {
-	width: 36rem;
+	width: 39rem;
 	overflow-y: hidden;
 	overflow: scroll;
 	margin: 0 0 2rem 0;
-	background: linear-gradient(#e5e5fb, #ffffff);
+	background: linear-gradient(#f7faff, #ffffff);
 	padding: 1rem 2.5rem;
 	height: 20rem;
 	border-radius: 6px;
 	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
 }
 
 .youtubeScrollr::-webkit-scrollbar {
@@ -94,16 +101,44 @@
 	}
 }
 
+.youtubeMeScrollr {
+	width: 39rem;
+	overflow-y: hidden;
+	overflow: scroll;
+	margin: 0 0 2rem 0;
+	background: linear-gradient(#f7faff, #ffffff);
+	padding: 1rem 2.5rem;
+	height: 20rem;
+	border-radius: 6px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+}
+
+.youtubeMeScrollr::-webkit-scrollbar {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.youtubeMeScrollr {
+		width: 95% !important;
+		padding: 0 !important;
+	}
+}
+
 .vscoScrollr {
-	width: 36rem;
+	width: 39rem;
 	overflow-y: hidden;
 	overflow: scroll;
 	margin: 0 0 2rem 0;
 	padding: 1rem 2.5rem;
 	height: 20rem;
 	border-radius: 6px;
-
-	background: linear-gradient(#e5e5fb, #ffffff);
+	background: linear-gradient(#f7faff, #ffffff);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: center;
 }
 
 .vscoScrollr::-webkit-scrollbar {
@@ -111,14 +146,15 @@
 }
 
 .redditScrollr {
-	width: 36rem;
+	width: 39rem;
 	overflow-y: hidden;
 	overflow: scroll;
 	margin: 0 0 2rem 0;
 	padding: 1rem 2.5rem;
 	height: 20rem;
 	border-radius: 6px;
-	background: linear-gradient(#e5e5fb, #fff);
+	background: linear-gradient(#f7faff, #fff);
+	justify-content: center;
 
 	a {
 		text-decoration: none;
@@ -174,16 +210,16 @@
 	margin-bottom: 1rem;
 	display: flex;
 	flex-direction: row;
-	border: 1px solid #e5e5fb;
+	border: 1px solid #2c616b;
 	border-radius: 15px;
 	padding: 1.6rem;
 	align-items: center;
-	background-color: rgba(207, 229, 233, 0.116);
+	background-color: rgb(247, 247, 247);
 }
 
 .linkThing {
 	text-decoration: none;
-	border-top: 6px #e5e5fb38 dashed;
+	border-top: 6px #2c616b dashed;
 	margin-left: 1rem;
 }
 
@@ -233,7 +269,7 @@
 }
 
 .vscoGridImage {
-	width: 11rem;
+	width: 13.1rem;
 	padding: 0.33rem;
 }
 
@@ -251,7 +287,7 @@
 
 .iconNail {
 	font-size: 3rem;
-	color: #e5e5fb;
+	color: #50a5b4;
 	padding-top: 0.5rem;
 }
 
@@ -261,13 +297,14 @@
 	background-color: #ffffff;
 	border-radius: 15%;
 	text-align-last: center;
-	border: 1px solid #e5e5fb;
+	border: 1px solid #2c616b;
 	flex: none;
 }
 
 .rightSide {
 	overflow-y: hidden;
 	overflow: scroll;
+	padding: 0 0 0 4rem;
 }
 
 .rightSide::-webkit-scrollbar {
@@ -284,8 +321,7 @@
 .rightSideContainer {
 	display: flex;
 	flex-direction: column;
-	width: 47rem;
-	margin: 0 0 0 2rem;
+	width: 50rem;
 }
 
 @media (max-width: 768px) {

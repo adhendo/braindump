@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -309,25 +309,32 @@ function YoutubeMeLoader() {
   if (loading) return "";
   if (error) return `Error! ${error.message}`;
   return __jsx("div", {
-    className: _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.youtubeScrollr,
+    className: _styles_main_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.youtubeMeScrollr,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }, data.youtubeMe.map(youtubeMe => __jsx("iframe", {
-    width: "450",
-    height: "235",
+  }, data.youtubeMe.map((youtubeMe, index) => __jsx("div", {
+    key: index,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx("iframe", {
+    width: "600",
+    height: "295",
     src: youtubeMe.videoURL,
     frameborder: "0",
     allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
     allowfullscreen: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
-  })));
+  }))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (YoutubeMeLoader);
@@ -2257,8 +2264,10 @@ module.exports = {
 	"mainMain": "main_mainMain__3Al6e",
 	"mainAlt": "main_mainAlt__fds6V",
 	"instaGrid": "main_instaGrid__2hY2j",
+	"youtubeVid": "main_youtubeVid__GOG3H",
 	"youtubeScrollr": "main_youtubeScrollr__1AWzm",
 	"vscoScrollr": "main_vscoScrollr__3ts0q",
+	"youtubeMeScrollr": "main_youtubeMeScrollr__3fxcA",
 	"redditScrollr": "main_redditScrollr__37Lvi",
 	"subLink": "main_subLink__2a1AE",
 	"header": "main_header__YFiiz",
@@ -2282,7 +2291,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!********************************!*\
   !*** multi ./pages/from-me.js ***!
   \********************************/
